@@ -1,0 +1,26 @@
+@use "sass:map";
+
+$breakpoints: (
+  sm: 40em,
+  md: 60em,
+  lg:90em,
+);
+
+@mixin flex-center($direction: row) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @if $direction == col {
+    flex-direction: column;
+  }
+}
+
+
+@mixin mq($key){
+  $size: map.get($breakpoints, $key);
+
+  @media only screen and (max-width: $size){
+    @content;
+  }
+}

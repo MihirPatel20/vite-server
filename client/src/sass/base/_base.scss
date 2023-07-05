@@ -1,0 +1,15 @@
+@use "../abstracts" as *;
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", "Open Sans", sans-serif;
+  // font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: black;
+  background-color: $bg-primary;
+}
